@@ -37,3 +37,9 @@ pipeline:
                     command: |-
                       echo "build started for gradle project"
                       gradle build
+        variables:
+          - name: PLUGIN_DRY_RUN
+            type: String
+            description: ""
+            required: false
+            value: "true"
