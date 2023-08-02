@@ -1,0 +1,37 @@
+pipeline:
+  name: gradle build
+  identifier: gradle_build
+  projectIdentifier: demo
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1690791769304
+        repoName: cptekam/gradle-demo
+        build: <+input>
+  stages:
+    - stage:
+        name: gradle-build
+        identifier: gradlebuild
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_gradle
+                  identifier: Run_gradle
+                  spec:
+                    shell: Sh
+                    command: |-
+                      echo "build started for gradle project"
+                      gradle build
