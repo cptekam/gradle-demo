@@ -32,8 +32,8 @@ pipeline:
                   identifier: Run_gradle
                   spec:
                     connectorRef: account.harnessImage
-                    image: gradle:latest
+                    image: gradle:8.2
                     shell: Sh
                     command: |-
                       echo "build started for gradle project"
-                      gradlew build
+                      ./gradlew build
