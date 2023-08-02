@@ -37,6 +37,15 @@ pipeline:
                     command: |-
                       echo "build started for gradle project"
                       gradle build
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    repo: myrepo/gradle_demo
+                    tags:
+                      - latest
         variables:
           - name: PLUGIN_DRY_RUN
             type: String
