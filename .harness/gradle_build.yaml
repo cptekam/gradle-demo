@@ -36,4 +36,4 @@ pipeline:
                     shell: Sh
                     command: |-
                       echo "build started for gradle project"
-                      gradlew build
+                      gradle build
