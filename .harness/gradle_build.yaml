@@ -52,3 +52,18 @@ pipeline:
             description: ""
             required: false
             value: "true"
+  notificationRules:
+    - name: email me
+      identifier: email_me
+      pipelineEvents:
+        - type: PipelineStart
+        - type: PipelineSuccess
+        - type: PipelineFailed
+        - type: PipelineEnd
+      notificationMethod:
+        type: Email
+        spec:
+          userGroups: []
+          recipients:
+            - chandra.tekam@globallogic.com
+      enabled: true
