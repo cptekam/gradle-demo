@@ -43,7 +43,7 @@ pipeline:
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: chandu_doc
-                    repo: myrepo/gradle_demo
+                    repo: cptekam/myrepo
                     tags:
                       - latest
         variables:
