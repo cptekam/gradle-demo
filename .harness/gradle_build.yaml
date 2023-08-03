@@ -42,7 +42,7 @@ pipeline:
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    connectorRef: account.harnessImage
+                    connectorRef: chandu_doc
                     repo: myrepo/gradle_demo
                     tags:
                       - latest
