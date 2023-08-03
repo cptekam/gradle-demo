@@ -42,8 +42,8 @@ pipeline:
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    connectorRef: account.harnessImage
-                    repo: gradle_demo
+                    connectorRef: connectoer
+                    repo: cptekam/gradle-demo
                     tags:
                       - latest
         variables:
