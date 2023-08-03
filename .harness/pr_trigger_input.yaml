@@ -1,0 +1,15 @@
+inputSet:
+  name: pr_trigger_input
+  identifier: pr_trigger_input
+  orgIdentifier: default
+  projectIdentifier: demo
+  pipeline:
+    identifier: spring_demo
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
+  object Object: pipeline.properties.ci.codebase
