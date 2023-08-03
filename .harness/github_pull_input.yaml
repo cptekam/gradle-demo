@@ -1,0 +1,15 @@
+inputSet:
+  name: github_pull_input
+  identifier: github_pull_input
+  orgIdentifier: default
+  projectIdentifier: demo
+  pipeline:
+    identifier: gradle_build
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
+  object Object: pipeline.properties.ci.codebase
