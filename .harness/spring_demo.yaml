@@ -35,3 +35,12 @@ pipeline:
                     image: gradle:latest
                     shell: Sh
                     command: gradle build
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: connectoer
+                    repo: cptekam/gradle-demo
+                    tags:
+                      - latest
